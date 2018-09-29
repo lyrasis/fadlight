@@ -4,7 +4,7 @@ An ArcLight.
 
 ## Pre-steps
 
-For a new rails project only, add the ArcLight gems:
+For a new rails project only, add the ArcLight gems then:
 
 ```bash
 ./bin/rails generate blacklight:install --devise
@@ -14,8 +14,7 @@ For a new rails project only, add the ArcLight gems:
 ## Getting started
 
 ```bash
-docker-compose -f docker-compose-db.yml up
-./bin/rails db:migrate
+./bin/setup
 ```
 
 ---
