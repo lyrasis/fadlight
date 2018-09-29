@@ -1,24 +1,12 @@
-# README
+# FADLight
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An ArcLight.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+```bash
+docker-compose -f docker-compose-db.yml up
+./bin/rails db:migrate
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+---
