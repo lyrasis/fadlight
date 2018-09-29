@@ -2,7 +2,7 @@
 
 An ArcLight.
 
-## Pre-steps
+## Pre-steps (fyi only, skip this)
 
 For a new rails project only, add the ArcLight gems then:
 
