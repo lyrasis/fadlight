@@ -16,7 +16,7 @@ services:
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
-      - fadlight
+      - arclight
       - /opt/solr/server/solr/configsets/arclight
     volumes:
       - ./solr/conf:/opt/solr/server/solr/configsets/arclight/conf
