@@ -4,7 +4,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: 123456
-  host: <%= ENV.fetch('FADLIGHT_DATABASE_HOST', '127.0.0.1') %>
+  host: <%= ENV.fetch('DATABASE_HOST', '127.0.0.1') %>
 
 development:
   <<: *default
@@ -16,6 +16,6 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['FADLIGHT_DATABASE_NAME'] %>
-  username: <%= ENV['FADLIGHT_DATABASE_USERNAME'] %>
-  password: <%= ENV['FADLIGHT_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
