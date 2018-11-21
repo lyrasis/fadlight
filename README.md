@@ -14,7 +14,9 @@ For a new rails project only, add the ArcLight gems then:
 ## Getting started
 
 ```bash
+sudo apt-get install libmysqlclient-dev # ubuntu
 ./bin/setup
+./bin/rails s
 ```
 
 ## Docker runtime environment variables
@@ -27,6 +29,7 @@ DATABASE_PASSWORD=secret
 LOGO_URL=https://example.com/logo.png
 REPOSITORY_URL=https://example.com/repositories.yml
 SOLR_URL=http://localhost:8983/solr/arclight
+THEME_CSS_URL=https://example.com/theme.css
 ```
 
 ---
