@@ -1,5 +1,24 @@
 version: '3'
 services:
+  app:
+    build: .
+    image: fadlight
+    ports:
+     - "3000:3000"
+    environment:
+      DATABASE_HOST: db
+      DATABASE_NAME: fadlight_production
+      DATABASE_PASSWORD: "123456"
+      DATABASE_USERNAME: root
+      LOGO_URL: https://www.lyrasis.org/SiteAssets/lyrasis.png
+      RAILS_LOG_TO_STDOUT: "true"
+      RAILS_SERVE_STATIC_FILES: "true"
+      SECRET_KEY_BASE: supersecretkey
+      SOLR_URL: http://solr:8983/solr/arclight
+      THEME_CSS_URL: https://gist.githubusercontent.com/mark-cooper/df7b1ff339f5c918da830a9b44dd914f/raw/fadlight.css
+    depends_on:
+      - db
+      - solr
   db:
     image: mysql:5.7
     command: --character-set-server=utf8 --collation-server=utf8_unicode_ci --innodb_buffer_pool_size=2G --innodb_buffer_pool_instances=2

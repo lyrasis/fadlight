@@ -14,12 +14,6 @@ chdir APP_ROOT do
   system! 'gem install bundler --conservative'
   system('bundle check') || system!('bundle install')
 
-  puts "\n== Starting MySQL and Solr =="
-  system! 'docker-compose -f docker-compose-servers.yml up -d'
-
-  puts "\n== Waiting for MySQL =="
-  system! 'sleep 15'
-
   puts "\n== Preparing database =="
   system! 'bin/rails db:setup'
 
