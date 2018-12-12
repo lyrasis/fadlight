@@ -1,6 +1,6 @@
 # FadLight
 
-An ArcLight.
+A JIT configurable ArcLight using [Docker](https://www.docker.com).
 
 ## Pre-steps (fyi only, skip this)
 
@@ -15,8 +15,8 @@ For a new rails project only, add the ArcLight gems then:
 
 Pre-reqs:
 
-- Docker
-- Docker Compose
+- [Docker](https://www.docker.com)
+- [Docker Compose](https://docs.docker.com/compose)
 
 ```bash
 docker-compose build
@@ -36,7 +36,7 @@ RAILS_SERVE_STATIC_FILES=true
 SECRET_KEY_BASE=supersecretkey
 SOLR_URL=http://localhost:8983/solr/arclight
 
-# FAD CONFIG ENVVARS (startup.sh)
+# FADLIGHT CONFIG ENVVARS (startup.sh)
 LOGO_URL=https://example.com/logo.png
 REPOSITORY_URL=https://example.com/repositories.yml
 THEME_CSS_URL=https://example.com/theme.css

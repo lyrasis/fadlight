@@ -13,6 +13,7 @@ services:
       LOGO_URL: https://www.lyrasis.org/SiteAssets/lyrasis.png
       RAILS_LOG_TO_STDOUT: "true"
       RAILS_SERVE_STATIC_FILES: "true"
+      REPOSITORY_URL: https://gist.githubusercontent.com/mark-cooper/5eb535fc7ee94ca2ac3951f3a386ccaa/raw/repositories.yml
       SECRET_KEY_BASE: supersecretkey
       SOLR_URL: http://solr:8983/solr/arclight
       THEME_CSS_URL: https://gist.githubusercontent.com/mark-cooper/df7b1ff339f5c918da830a9b44dd914f/raw/fadlight.css

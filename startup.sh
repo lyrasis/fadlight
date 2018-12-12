@@ -18,6 +18,11 @@ if [[ -v LOGO_URL ]]; then
   wget -O app/assets/images/blacklight/logo.png $LOGO_URL
 fi
 
+if [[ -v REPOSITORY_URL ]]; then
+  echo "Downloading repositories configuration: $REPOSITORY_URL"
+  wget -O config/repositories.yml $REPOSITORY_URL
+fi
+
 if [[ -v THEME_CSS_URL ]]; then
   echo "Downloading theme css: $THEME_CSS_URL"
   wget -O app/assets/stylesheets/application.css $THEME_CSS_URL
