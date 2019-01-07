@@ -10,6 +10,7 @@ services:
       DATABASE_NAME: fadlight_production
       DATABASE_PASSWORD: "123456"
       DATABASE_USERNAME: root
+      FAVICON_URL: https://www.lyrasis.org/SiteAssets/favicon.png
       LOCALES_URL: "https://gist.github.com/mark-cooper/f02558c316d4bcd4907b51a85e61e345/raw/en.yml"
       LOGO_URL: https://www.lyrasis.org/SiteAssets/lyrasis.png
       RAILS_LOG_TO_STDOUT: "true"

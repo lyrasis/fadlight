@@ -12,6 +12,11 @@ while ! mysql -h "$DATABASE_HOST" -u "$DATABASE_USERNAME" -p"$DATABASE_PASSWORD"
     fi;
 done
 
+if [[ -v FAVICON_URL ]]; then
+  echo "Downloading favicon: $FAVICON_URL"
+  wget -O app/assets/images/favicon.ico $FAVICON_URL
+fi
+
 if [[ -v LOCALES_URL ]]; then
   echo "Downloading locales: $LOCALES_URL"
   wget -O config/locales/en.yml $LOCALES_URL
