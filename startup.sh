@@ -12,6 +12,11 @@ while ! mysql -h "$DATABASE_HOST" -u "$DATABASE_USERNAME" -p"$DATABASE_PASSWORD"
     fi;
 done
 
+if [[ -v LOCALES_URL ]]; then
+  echo "Downloading locales: $LOCALES_URL"
+  wget -O config/locales/en.yml $LOCALES_URL
+fi
+
 if [[ -v LOGO_URL ]]; then
   mkdir -p app/assets/images/blacklight/
   echo "Downloading logo: $LOGO_URL"

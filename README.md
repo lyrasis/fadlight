@@ -37,6 +37,7 @@ SECRET_KEY_BASE=supersecretkey
 SOLR_URL=http://localhost:8983/solr/arclight
 
 # FADLIGHT CONFIG ENVVARS (startup.sh)
+LOCALES_URL=https://example.com/en.yml
 LOGO_URL=https://example.com/logo.png
 REPOSITORY_URL=https://example.com/repositories.yml
 THEME_CSS_URL=https://example.com/theme.css
