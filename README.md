@@ -23,6 +23,16 @@ docker-compose build
 docker-compose up
 ```
 
+## Loading data
+
+```bash
+PROVIDER=https://archivesspace.lyrasistechnology.org/oai
+docker run -it --rm --net=host \
+  -e OAI_ENDPOINT=$PROVIDER \
+  -e SOLR_URL=http://localhost:8983/solr/arclight \
+  lyrasis/arclight-oai-indexer:latest bundle exec rake arclight:oai:index[1970-01-01]
+```
+
 ## Docker runtime environment variables
 
 ```bash
