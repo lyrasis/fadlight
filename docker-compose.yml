@@ -10,15 +10,15 @@ services:
       DATABASE_NAME: fadlight_production
       DATABASE_PASSWORD: "123456"
       DATABASE_USERNAME: root
-      FAVICON_URL: https://www.lyrasis.org/SiteAssets/favicon.png
-      LOCALES_URL: "https://gist.github.com/mark-cooper/f02558c316d4bcd4907b51a85e61e345/raw/en.yml"
-      LOGO_URL: https://www.lyrasis.org/SiteAssets/lyrasis.png
+      FAVICON_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.favicon.png
+      LOCALES_URL: "https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.en.yml"
+      LOGO_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.logo.png
       RAILS_LOG_TO_STDOUT: "true"
       RAILS_SERVE_STATIC_FILES: "true"
-      REPOSITORY_URL: https://gist.githubusercontent.com/mark-cooper/5eb535fc7ee94ca2ac3951f3a386ccaa/raw/repositories.yml
+      REPOSITORY_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.repo.yml
       SECRET_KEY_BASE: supersecretkey
       SOLR_URL: http://solr:8983/solr/arclight
-      THEME_CSS_URL: https://gist.githubusercontent.com/mark-cooper/df7b1ff339f5c918da830a9b44dd914f/raw/fadlight.css
+      THEME_CSS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.css
     depends_on:
       - db
       - solr
