@@ -33,5 +33,8 @@ RUN bundle install \
 
 COPY . .
 
+RUN echo "Rails.application.config.assets.precompile += %w( fadlight.css fadlight.js )" \
+      >> config/initializers/assets.rb
+
 EXPOSE 3000
 CMD ["/app/startup.sh"]

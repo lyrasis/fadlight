@@ -48,6 +48,7 @@ SOLR_URL=http://localhost:8983/solr/arclight
 
 # FADLIGHT CONFIG ENVVARS (startup.sh)
 FAVICON_URL=https://example.com/favicon.ico
+JS_URL=https://example.com/example.js
 LOCALES_URL=https://example.com/en.yml
 LOGO_URL=https://example.com/logo.png
 REPOSITORY_URL=https://example.com/repositories.yml

@@ -17,6 +17,11 @@ if [[ -v FAVICON_URL ]]; then
   wget -O app/assets/images/favicon.ico $FAVICON_URL
 fi
 
+if [[ -v JS_URL ]]; then
+  echo "Downloading javascript: $JS_URL"
+  wget -O app/assets/javascripts/fadlight.js $JS_URL
+fi
+
 if [[ -v LOCALES_URL ]]; then
   echo "Downloading locales: $LOCALES_URL"
   wget -O config/locales/en.yml $LOCALES_URL
@@ -35,7 +40,7 @@ fi
 
 if [[ -v THEME_CSS_URL ]]; then
   echo "Downloading theme css: $THEME_CSS_URL"
-  wget -O app/assets/stylesheets/application.css $THEME_CSS_URL
+  wget -O app/assets/stylesheets/fadlight.css $THEME_CSS_URL
 fi
 
 bin/rake assets:precompile
