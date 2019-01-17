@@ -17,6 +17,17 @@ if [[ -v FAVICON_URL ]]; then
   wget -O app/assets/images/favicon.ico $FAVICON_URL
 fi
 
+if [[ -v FOOTER_URL ]]; then
+  mkdir -p app/views/shared/
+  echo "Downloading footer: $FOOTER_URL"
+  wget -O app/views/shared/_footer.html.erb $FOOTER_URL
+fi
+
+if [[ -v HEADER_URL ]]; then
+  echo "Downloading header: $HEADER_URL"
+  wget -O app/views/shared/_header.html.erb $HEADER_URL
+fi
+
 if [[ -v JS_URL ]]; then
   echo "Downloading javascript: $JS_URL"
   wget -O app/assets/javascripts/fadlight.js $JS_URL

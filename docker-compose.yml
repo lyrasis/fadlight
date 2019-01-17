@@ -11,6 +11,8 @@ services:
       DATABASE_PASSWORD: "123456"
       DATABASE_USERNAME: root
       FAVICON_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.favicon.png
+      HEADER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.header.erb
+      FOOTER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.footer.erb
       JS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.js
       LOCALES_URL: "https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.en.yml"
       LOGO_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.logo.png
