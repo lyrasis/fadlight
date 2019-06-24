@@ -26,7 +26,7 @@ RUN apk update && \
 WORKDIR /app
 ADD Gemfile* /app/
 
-RUN bundle install \
+RUN gem install bundler && bundle install \
       --jobs "$(getconf _NPROCESSORS_ONLN)" \
       --retry 5 \
       --without development test

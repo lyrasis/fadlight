@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 # arclight
-gem 'arclight', github: 'sul-dlss/arclight'
-gem 'blacklight_range_limit', '7.0.0.rc2'
+gem 'arclight', '~> 0.1.4'
+gem 'blacklight_range_limit'
 
 # rails
 gem 'rails', '~> 5.2.1'
