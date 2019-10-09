@@ -10,18 +10,18 @@ services:
       DATABASE_NAME: fadlight_production
       DATABASE_PASSWORD: "123456"
       DATABASE_USERNAME: root
-      FAVICON_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.favicon.png
-      HEADER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.header.erb
-      FOOTER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.footer.erb
-      JS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.js
-      LOCALES_URL: "https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.en.yml"
-      LOGO_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.logo.png
+      FAVICON_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.favicon.png
+      HEADER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.header.erb
+      FOOTER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.footer.erb
+      JS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.js
+      LOCALES_URL: "https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.en.yml"
+      LOGO_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.logo.png
       RAILS_LOG_TO_STDOUT: "true"
       RAILS_SERVE_STATIC_FILES: "true"
-      REPOSITORY_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.repo.yml
+      REPOSITORY_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.repo.yml
       SECRET_KEY_BASE: supersecretkey
       SOLR_URL: http://solr:8983/solr/arclight
-      THEME_CSS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts.css
+      THEME_CSS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.css
     depends_on:
       - db
       - solr
