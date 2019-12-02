@@ -17,7 +17,9 @@
     <%= content_for(:head) %>
   </head>
   <body class="<%= render_body_class %>">
+  <!-- BEGIN: OVERRIDE -->
   <%= render partial: 'shared/header' %>
+  <!-- END: OVERRIDE -->
   <%= render partial: 'shared/header_navbar' %>
 
   <div id="main-container" class="<%= container_classes %>">
