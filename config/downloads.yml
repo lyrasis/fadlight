@@ -4,10 +4,5 @@
 #                 size value should be a String (shown as-is) or
 #                 the number of bytes in the download.
 #
-sample_unitid:
-  pdf:
-    href: 'http://example.com/sample.pdf'
-    size: '1.23MB'
-  ead:
-    href: 'http://example.com/sample.xml'
-    size: 123456
+default:
+  disabled: true

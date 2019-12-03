@@ -1,5 +1,7 @@
 #!/bin/bash
 
+test -f .env.local && source .env.local
+
 maxcounter=45
 counter=1
 while ! mysql -h "$DATABASE_HOST" -u "$DATABASE_USERNAME" -p"$DATABASE_PASSWORD" \

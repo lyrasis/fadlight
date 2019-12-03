@@ -35,7 +35,7 @@ services:
     volumes:
       - ./db/fadlight.sql:/docker-entrypoint-initdb.d/fadlight.sql
   solr:
-    image: solr:7.5
+    image: solr:8.2
     ports:
      - "8983:8983"
     entrypoint:
