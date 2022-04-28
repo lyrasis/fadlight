@@ -1,0 +1,8 @@
+#!/bin/bash
+
+test -f .env.local && source .env.local
+
+./bin/rails tmp:clear
+./bin/rails db:setup
+./bin/rails db:migrate
+./bin/rails s

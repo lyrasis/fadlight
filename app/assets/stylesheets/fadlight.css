@@ -1,1 +1,17 @@
-/* fadlight.css placeholder */
+.bg-dark {
+  background-color: #E9ECEF !important;
+}
+
+.jumbotron {
+  background-color: #FFF;
+}
+
+.navbar-brand {
+  flex: 0 0 300px;
+  margin-top: 0rem;
+  width: 300px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #06305A !important;
+}

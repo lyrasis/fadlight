@@ -1,4 +1,4 @@
-FROM ruby:2.5.3-alpine
+FROM ruby:2.7.4-alpine
 
 ENV PATH=/root/.yarn/bin:$PATH \
     RACK_ENV=production \
@@ -37,4 +37,4 @@ RUN echo "Rails.application.config.assets.precompile += %w( fadlight.css fadligh
       >> config/initializers/assets.rb
 
 EXPOSE 3000
-CMD ["/app/startup.sh"]
+CMD ["/app/run"]

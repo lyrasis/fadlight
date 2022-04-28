@@ -52,4 +52,3 @@ gem 'rsolr', '>= 1.0', '< 3'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 
 gem 'blacklight-locale_picker'
-gem 'blacklight-locale_picker'

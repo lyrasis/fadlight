@@ -1,41 +1,16 @@
 version: '3'
 services:
-  app:
-    build: .
-    image: fadlight
-    ports:
-     - "3000:3000"
-    environment:
-      DATABASE_HOST: db
-      DATABASE_NAME: fadlight_production
-      DATABASE_PASSWORD: "123456"
-      DATABASE_USERNAME: root
-      FAVICON_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.favicon.png
-      HEADER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.header.erb
-      FOOTER_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.footer.erb
-      JS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.js
-      LOCALES_URL: "https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.en.yml"
-      LOGO_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.logo.png
-      RAILS_LOG_TO_STDOUT: "true"
-      RAILS_SERVE_STATIC_FILES: "true"
-      REPOSITORY_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.repo.yml
-      SECRET_KEY_BASE: supersecretkey
-      SOLR_URL: http://solr:8983/solr/arclight
-      THEME_CSS_URL: https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.css
-    depends_on:
-      - db
-      - solr
   db:
-    image: mysql:5.7
+    image: mysql:8
+    platform: linux/amd64
     command: --character-set-server=utf8 --collation-server=utf8_unicode_ci --innodb_buffer_pool_size=2G --innodb_buffer_pool_instances=2
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
-    volumes:
-      - ./db/fadlight.sql:/docker-entrypoint-initdb.d/fadlight.sql
+    volumes: []
   solr:
-    image: solr:8.2
+    image: solr:8.11
     ports:
      - "8983:8983"
     entrypoint:

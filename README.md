@@ -1,45 +1,26 @@
 # FadLight
 
-A JIT configurable ArcLight using [Docker](https://www.docker.com).
+A JIT configurable ArcLight using [Docker](https://www.docker.com). To be
+more specific it's a vanilla Rails + ArcLight application that provides
+a Rake task (`./bin/rake fadlight:assets:download`) to download a limited
+set of customizations to apply for each deployment.
 
 ## Getting started
 
-### With Docker for the app
-
-Pre-reqs:
-
-- [Docker](https://www.docker.com)
-- [Docker Compose](https://docs.docker.com/compose)
-
 ```bash
-docker-compose build
-docker-compose up
-```
+# run mysql & solr using docker
+docker-compose up -d
 
-### Without Docker for the app
-
-MySQL should be ready: `localhost:3306`, `root:123456`, `fadlight_development`.
-Solr should be available at: `http://127.0.0.1:8983/solr/arclight`
-
-```bash
-# services via docker if needed
-docker-compose up -d db
-docker-compose up -d solr
-
-# run the app locally
+# update cfg if preferred
 cp .env .env.local
-./startup.sh
+# run the app locally
+./run
 ```
 
 ## Loading data
 
 ```bash
-PROVIDER=https://archivesspace.lyrasistechnology.org/oai
-docker run -it --rm --net=host \
-  -e OAI_ENDPOINT=$PROVIDER \
-  -e REPOSITORY_URL=https://s3-us-west-2.amazonaws.com/as-public-shared-files/dts/dts.repo.yml \
-  -e SOLR_URL=http://localhost:8983/solr/arclight \
-  lyrasis/arclight-oai-indexer:latest bundle exec rake arclight:index:oai[1970-01-01]
+./load # PROVIDER=https://archivesspace.lyrasistechnology.org/oai
 ```
 
 ## Docker runtime environment variables
@@ -54,7 +35,6 @@ RAILS_LOG_TO_STDOUT=true # preferred for docker
 RAILS_SERVE_STATIC_FILES=true
 SECRET_KEY_BASE=supersecretkey
 SOLR_URL=http://localhost:8983/solr/arclight
-
 # FADLIGHT CONFIG ENVVARS (startup.sh)
 FAVICON_URL=https://example.com/favicon.ico
 FOOTER_URL=https://example.com/footer.erb
