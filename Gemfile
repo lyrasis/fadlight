@@ -3,10 +3,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
-
 # arclight
-gem 'arclight', '~> 0.3.0'
+gem 'arclight', '~> 0.4.0'
 gem 'blacklight_range_limit', '~> 7.1'
 
 # rails
@@ -15,7 +13,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'puma', '~> 3.12'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 6.1'
 gem 'sass-rails', '~> 5.0'
 gem 'tether-rails'
 gem 'turbolinks', '~> 5'
